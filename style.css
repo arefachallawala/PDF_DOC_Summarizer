@@ -1,0 +1,406 @@
+/* ============================= */
+/*      DOCSENSE AI THEME        */
+/* ============================= */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+html,
+body,
+[class*="css"]{
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ============================= */
+/* Background */
+/* ============================= */
+
+.stApp{
+
+    background-color:#FFF8F5;
+}
+
+
+
+/* ============================= */
+/* Main Title */
+/* ============================= */
+
+.main-title{
+
+    text-align:center;
+    font-size:42px;
+    font-weight:700;
+
+    color:#FF6B6B;
+
+    margin-bottom:5px;
+}
+
+
+
+.subtitle{
+
+    text-align:center;
+
+    font-size:18px;
+
+    color:#666666;
+
+    margin-bottom:30px;
+}
+
+
+
+/* ============================= */
+/* Cards */
+/* ============================= */
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    margin-top:20px;
+
+    margin-bottom:20px;
+
+    box-shadow:0px 4px 18px rgba(0,0,0,0.08);
+
+    border:1px solid #FFE3DA;
+}
+
+
+
+/* ============================= */
+/* Section Heading */
+/* ============================= */
+
+.section-title{
+
+    font-size:24px;
+
+    font-weight:600;
+
+    color:#FF6B6B;
+
+    margin-bottom:15px;
+}
+
+
+
+/* ============================= */
+/* Statistics Box */
+/* ============================= */
+
+.stat-box{
+
+    background:#FFD6C9;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    text-align:center;
+
+    color:#2F2F2F;
+
+    margin-bottom:15px;
+
+    transition:0.3s;
+}
+
+
+
+.stat-box:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0px 8px 20px rgba(255,107,107,0.25);
+}
+
+
+
+.stat-number{
+
+    font-size:28px;
+
+    font-weight:bold;
+}
+
+
+
+.stat-label{
+
+    font-size:15px;
+}
+
+
+
+/* ============================= */
+/* Upload Area */
+/* ============================= */
+
+[data-testid="stFileUploader"]{
+
+    border:2px dashed #FFB4A2;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    background:white;
+}
+
+
+
+/* ============================= */
+/* Text Area */
+/* ============================= */
+
+textarea{
+
+    border-radius:12px !important;
+}
+
+
+
+/* ============================= */
+/* Input Box */
+/* ============================= */
+
+.stTextInput input{
+
+    border-radius:12px;
+
+    border:2px solid #FFD6C9;
+
+    padding:10px;
+}
+
+
+
+/* ============================= */
+/* Buttons */
+/* ============================= */
+
+.stButton>button{
+
+    width:100%;
+
+    background:#FF6B6B;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+
+
+.stButton>button:hover{
+
+    background:#FF8E72;
+
+    color:white;
+
+    transform:scale(1.02);
+}
+
+
+
+/* ============================= */
+/* Download Button */
+/* ============================= */
+
+.stDownloadButton>button{
+
+    width:100%;
+
+    background:#66BB6A;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    font-weight:600;
+}
+
+
+
+.stDownloadButton>button:hover{
+
+    background:#4CAF50;
+}
+
+
+
+/* ============================= */
+/* Success Message */
+/* ============================= */
+
+.stSuccess{
+
+    border-radius:12px;
+}
+
+
+
+/* ============================= */
+/* Warning Message */
+/* ============================= */
+
+.stWarning{
+
+    border-radius:12px;
+}
+
+
+
+/* ============================= */
+/* Error Message */
+/* ============================= */
+
+.stError{
+
+    border-radius:12px;
+}
+
+
+
+/* ============================= */
+/* Summary Box */
+/* ============================= */
+
+.summary-box{
+
+    background:#FFF0EB;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    line-height:1.8;
+
+    color:#2F2F2F;
+}
+
+
+
+/* ============================= */
+/* Answer Box */
+/* ============================= */
+
+.answer-box{
+
+    background:#FFF7F4;
+
+    padding:20px;
+
+    border-left:6px solid #FF6B6B;
+
+    border-radius:15px;
+
+    line-height:1.8;
+}
+
+
+
+/* ============================= */
+/* Keyword Badge */
+/* ============================= */
+
+.keyword{
+
+    display:inline-block;
+
+    background:#FFD6C9;
+
+    color:#444;
+
+    padding:8px 14px;
+
+    margin:5px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:500;
+}
+
+
+
+/* ============================= */
+/* Horizontal Line */
+/* ============================= */
+
+hr{
+
+    border:none;
+
+    height:1px;
+
+    background:#FFE0D6;
+
+    margin-top:30px;
+
+    margin-bottom:30px;
+}
+
+
+
+/* ============================= */
+/* Footer */
+/* ============================= */
+
+.footer{
+
+    text-align:center;
+
+    color:#888888;
+
+    margin-top:40px;
+
+    font-size:14px;
+}
+
+
+
+/* ============================= */
+/* Hide Streamlit Branding */
+/* ============================= */
+
+#MainMenu{
+
+    visibility:hidden;
+}
+
+footer{
+
+    visibility:hidden;
+}
+
+header{
+
+    visibility:hidden;
+}
