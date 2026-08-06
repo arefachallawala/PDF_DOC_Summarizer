@@ -1,35 +1,101 @@
+import re
+
+from nltk.corpus import stopwords
+from nltk.tokenize import sent_tokenize, word_tokenize
+
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from nltk.tokenize import sent_tokenize
+
+
+def preprocess(text):
+
+    stop_words = set(stopwords.words("english"))
+
+    words = word_tokenize(text.lower())
+
+    cleaned_words = []
+
+    for word in words:
+
+        if word.isalpha() and word not in stop_words:
+
+            cleaned_words.append(word)
+
+    return " ".join(cleaned_words)
 
 
 def answer_question(document_text, question):
 
-    sentences = sent_tokenize(document_text)
+    paragraphs = []
 
-    if len(sentences) == 0:
-        return "No content found."
+    for paragraph in document_text.split("\n"):
 
-    corpus = sentences + [question]
+        paragraph = paragraph.strip()
 
-    vectorizer = TfidfVectorizer()
+        if len(paragraph) > 20:
 
-    tfidf_matrix = vectorizer.fit_transform(corpus)
+            paragraphs.append(paragraph)
 
-    question_vector = tfidf_matrix[-1]
+    if len(paragraphs) == 0:
 
-    sentence_vectors = tfidf_matrix[:-1]
+        paragraphs = sent_tokenize(document_text)
 
-    similarity_scores = cosine_similarity(
-        question_vector,
-        sentence_vectors
+    cleaned_paragraphs = []
+
+    for paragraph in paragraphs:
+
+        cleaned_paragraphs.append(
+
+            preprocess(paragraph)
+
+        )
+
+    cleaned_question = preprocess(question)
+
+    corpus = cleaned_paragraphs + [
+
+        cleaned_question
+
+    ]
+
+    vectorizer = TfidfVectorizer(
+
+        ngram_range=(1,2)
+
     )
 
-    best_match = similarity_scores.argmax()
+    tfidf = vectorizer.fit_transform(
 
-    confidence = similarity_scores[0][best_match]
+        corpus
 
-    if confidence < 0.1:
-        return "Sorry, I couldn't find a relevant answer in the document."
+    )
 
-    return sentences[best_match]
+    similarity = cosine_similarity(
+
+        tfidf[-1],
+
+        tfidf[:-1]
+
+    )
+
+    best = similarity.argmax()
+
+    score = similarity[0][best]
+
+    if score < 0.08:
+
+        return "I could not find a relevant answer in the document."
+
+    answer = paragraphs[best]
+
+    answer = re.sub(
+
+        r"\n+",
+
+        " ",
+
+        answer
+
+    )
+
+    return answer

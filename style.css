@@ -1,406 +1,252 @@
-/* ============================= */
-/*      DOCSENSE AI THEME        */
-/* ============================= */
-
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-
-html,
-body,
-[class*="css"]{
-
-    font-family: 'Poppins', sans-serif;
-}
-
-
-/* ============================= */
-/* Background */
-/* ============================= */
+/* ------------------------------
+   Global
+------------------------------ */
 
 .stApp{
-
-    background-color:#FFF8F5;
+    background:#F7F7F5;
+    color:#222222;
+    font-family: "Segoe UI", sans-serif;
 }
 
+/* ------------------------------
+   Sidebar
+------------------------------ */
 
+section[data-testid="stSidebar"]{
+    background:#FFFFFF;
+    border-right:1px solid #E5E7EB;
+}
 
-/* ============================= */
-/* Main Title */
-/* ============================= */
+section[data-testid="stSidebar"] h1{
+    font-size:26px;
+    font-weight:700;
+    color:#222;
+}
 
-.main-title{
+section[data-testid="stSidebar"] p{
+    color:#666;
+}
 
-    text-align:center;
+/* ------------------------------
+   Main Content
+------------------------------ */
+
+.main .block-container{
+
+    padding-top:2rem;
+    padding-left:3rem;
+    padding-right:3rem;
+    max-width:1200px;
+}
+
+/* ------------------------------
+   Titles
+------------------------------ */
+
+h1{
+
     font-size:42px;
+
     font-weight:700;
 
-    color:#FF6B6B;
+    color:#222;
 
-    margin-bottom:5px;
 }
 
-
-
-.subtitle{
-
-    text-align:center;
-
-    font-size:18px;
-
-    color:#666666;
-
-    margin-bottom:30px;
-}
-
-
-
-/* ============================= */
-/* Cards */
-/* ============================= */
-
-.card{
-
-    background:white;
-
-    border-radius:18px;
-
-    padding:25px;
-
-    margin-top:20px;
-
-    margin-bottom:20px;
-
-    box-shadow:0px 4px 18px rgba(0,0,0,0.08);
-
-    border:1px solid #FFE3DA;
-}
-
-
-
-/* ============================= */
-/* Section Heading */
-/* ============================= */
-
-.section-title{
-
-    font-size:24px;
-
-    font-weight:600;
-
-    color:#FF6B6B;
-
-    margin-bottom:15px;
-}
-
-
-
-/* ============================= */
-/* Statistics Box */
-/* ============================= */
-
-.stat-box{
-
-    background:#FFD6C9;
-
-    border-radius:15px;
-
-    padding:18px;
-
-    text-align:center;
-
-    color:#2F2F2F;
-
-    margin-bottom:15px;
-
-    transition:0.3s;
-}
-
-
-
-.stat-box:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0px 8px 20px rgba(255,107,107,0.25);
-}
-
-
-
-.stat-number{
+h2{
 
     font-size:28px;
 
-    font-weight:bold;
+    font-weight:600;
+
+    margin-top:15px;
+
+    color:#333;
+
 }
 
+h3{
 
+    font-size:22px;
 
-.stat-label{
+    color:#444;
 
-    font-size:15px;
 }
 
+/* ------------------------------
+   Buttons
+------------------------------ */
 
-
-/* ============================= */
-/* Upload Area */
-/* ============================= */
-
-[data-testid="stFileUploader"]{
-
-    border:2px dashed #FFB4A2;
-
-    border-radius:15px;
-
-    padding:20px;
+.stButton>button{
 
     background:white;
+
+    color:#222;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:10px;
+
+    padding:12px 22px;
+
+    transition:0.25s;
+
+    font-weight:600;
+
 }
 
+.stButton>button:hover{
 
+    background:#222;
 
-/* ============================= */
-/* Text Area */
-/* ============================= */
+    color:white;
+
+    border-color:#222;
+
+}
+
+/* ------------------------------
+   Download Button
+------------------------------ */
+
+.stDownloadButton>button{
+
+    background:#222;
+
+    color:white;
+
+    border-radius:10px;
+
+    border:none;
+
+    padding:12px;
+
+}
+
+.stDownloadButton>button:hover{
+
+    background:#000;
+
+}
+
+/* ------------------------------
+   Metrics
+------------------------------ */
+
+div[data-testid="metric-container"]{
+
+    background:white;
+
+    border-radius:14px;
+
+    padding:18px;
+
+    border:1px solid #ECECEC;
+
+    box-shadow:0px 2px 10px rgba(0,0,0,0.04);
+
+}
+
+/* ------------------------------
+   Text Area
+------------------------------ */
 
 textarea{
 
     border-radius:12px !important;
+
 }
 
+/* ------------------------------
+   Select Box
+------------------------------ */
 
+div[data-baseweb="select"]{
 
-/* ============================= */
-/* Input Box */
-/* ============================= */
+    border-radius:10px;
 
-.stTextInput input{
-
-    border-radius:12px;
-
-    border:2px solid #FFD6C9;
-
-    padding:10px;
 }
 
+/* ------------------------------
+   DataFrame
+------------------------------ */
 
+div[data-testid="stDataFrame"]{
 
-/* ============================= */
-/* Buttons */
-/* ============================= */
+    border-radius:14px;
 
-.stButton>button{
+    border:1px solid #ECECEC;
 
-    width:100%;
-
-    background:#FF6B6B;
-
-    color:white;
-
-    border:none;
-
-    border-radius:12px;
-
-    padding:12px;
-
-    font-size:17px;
-
-    font-weight:600;
-
-    transition:0.3s;
 }
 
-
-
-.stButton>button:hover{
-
-    background:#FF8E72;
-
-    color:white;
-
-    transform:scale(1.02);
-}
-
-
-
-/* ============================= */
-/* Download Button */
-/* ============================= */
-
-.stDownloadButton>button{
-
-    width:100%;
-
-    background:#66BB6A;
-
-    color:white;
-
-    border:none;
-
-    border-radius:12px;
-
-    padding:12px;
-
-    font-weight:600;
-}
-
-
-
-.stDownloadButton>button:hover{
-
-    background:#4CAF50;
-}
-
-
-
-/* ============================= */
-/* Success Message */
-/* ============================= */
-
-.stSuccess{
-
-    border-radius:12px;
-}
-
-
-
-/* ============================= */
-/* Warning Message */
-/* ============================= */
-
-.stWarning{
-
-    border-radius:12px;
-}
-
-
-
-/* ============================= */
-/* Error Message */
-/* ============================= */
-
-.stError{
-
-    border-radius:12px;
-}
-
-
-
-/* ============================= */
-/* Summary Box */
-/* ============================= */
-
-.summary-box{
-
-    background:#FFF0EB;
-
-    padding:20px;
-
-    border-radius:15px;
-
-    line-height:1.8;
-
-    color:#2F2F2F;
-}
-
-
-
-/* ============================= */
-/* Answer Box */
-/* ============================= */
-
-.answer-box{
-
-    background:#FFF7F4;
-
-    padding:20px;
-
-    border-left:6px solid #FF6B6B;
-
-    border-radius:15px;
-
-    line-height:1.8;
-}
-
-
-
-/* ============================= */
-/* Keyword Badge */
-/* ============================= */
-
-.keyword{
-
-    display:inline-block;
-
-    background:#FFD6C9;
-
-    color:#444;
-
-    padding:8px 14px;
-
-    margin:5px;
-
-    border-radius:30px;
-
-    font-size:14px;
-
-    font-weight:500;
-}
-
-
-
-/* ============================= */
-/* Horizontal Line */
-/* ============================= */
+/* ------------------------------
+   Divider
+------------------------------ */
 
 hr{
 
-    border:none;
+    border:0;
 
-    height:1px;
+    border-top:1px solid #E5E7EB;
 
-    background:#FFE0D6;
-
-    margin-top:30px;
-
-    margin-bottom:30px;
 }
 
+/* ------------------------------
+   Success Box
+------------------------------ */
 
+div[data-baseweb="notification"]{
 
-/* ============================= */
-/* Footer */
-/* ============================= */
+    border-radius:12px;
 
-.footer{
-
-    text-align:center;
-
-    color:#888888;
-
-    margin-top:40px;
-
-    font-size:14px;
 }
 
+/* ------------------------------
+   Chat
+------------------------------ */
 
+div[data-testid="stChatMessage"]{
 
-/* ============================= */
-/* Hide Streamlit Branding */
-/* ============================= */
+    background:white;
 
-#MainMenu{
+    border-radius:14px;
 
-    visibility:hidden;
+    padding:15px;
+
+    border:1px solid #ECECEC;
+
+    margin-bottom:15px;
+
 }
 
-footer{
+/* ------------------------------
+   File Uploader
+------------------------------ */
 
-    visibility:hidden;
+section[data-testid="stFileUploader"]{
+
+    border-radius:14px;
+
+    border:2px dashed #D1D5DB;
+
+    padding:15px;
+
+    background:white;
+
 }
 
-header{
+/* ------------------------------
+   Expanders
+------------------------------ */
 
-    visibility:hidden;
+details{
+
+    background:white;
+
+    border-radius:12px;
+
+    border:1px solid #ECECEC;
+
+    padding:10px;
+
 }
